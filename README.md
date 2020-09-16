@@ -1,5 +1,6 @@
 # shop
 
+[![CircleCI](https://circleci.com/gh/pradeepparambil/student-service.svg?style=svg)](https://circleci.com/gh/pradeepparambil/shop)
 Product Endpoints
 POST "/api/v1/products/" - Save a new product
 PUT  "/api/v1/products/" - Update a product
