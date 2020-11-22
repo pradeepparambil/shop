@@ -3,7 +3,6 @@ package com.teksenz.shop.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.teksenz.shop.domain.Product;
 import com.teksenz.shop.services.ProductService;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -56,8 +55,7 @@ class ProductControllerTest {
         mockMvc.perform(get(baseUrl+product.getId()))
                 .andExpect(status().isOk());
     }
-    @Disabled
-    @Test
+
     void saveNewProduct() throws Exception {
         Product product = getProduct();
         product.setId(UUID.randomUUID());
@@ -71,8 +69,7 @@ class ProductControllerTest {
 
     }
 
-    @Disabled
-    @Test
+
     void updateProduct() throws Exception {
         Product product = getProduct();
         product.setId(UUID.randomUUID());
@@ -83,8 +80,7 @@ class ProductControllerTest {
                 .andExpect(status().isNoContent());
     }
 
-    @Disabled
-    @Test
+
     void deleteById() throws Exception {
         Product product = getProduct();
         product.setId(UUID.randomUUID());
