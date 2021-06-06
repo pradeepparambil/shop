@@ -56,10 +56,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                             .antMatchers(HttpMethod.GET,"/api/v1/products").permitAll()
                             .antMatchers(HttpMethod.GET,"/api/v1/products/").permitAll()
                             .antMatchers(HttpMethod.GET,"/api/v1/products/{id}").permitAll()
-                            .antMatchers(HttpMethod.POST,"/api/v1/products").hasAnyRole("STORE_MANAGER")
-                            .antMatchers(HttpMethod.POST,"/api/v1/products/").hasAnyRole("STORE_MANAGER")
-                            .antMatchers(HttpMethod.PUT,"/api/v1/products/{id}").hasAnyRole("STORE_MANAGER")
-                            .antMatchers(HttpMethod.DELETE,"/api/v1/products/{id}").hasAnyRole("STORE_MANAGER");
+                            .antMatchers(HttpMethod.POST,"/api/v1/products").hasAnyRole("STORE_MANAGER","ADMIN")
+                            .antMatchers(HttpMethod.POST,"/api/v1/products/").hasAnyRole("STORE_MANAGER","ADMIN")
+                            .antMatchers(HttpMethod.PUT,"/api/v1/products/{id}").hasAnyRole("STORE_MANAGER","ADMIN")
+                            .antMatchers(HttpMethod.DELETE,"/api/v1/products/{id}").hasAnyRole("STORE_MANAGER","ADMIN");
 
 
                 })
