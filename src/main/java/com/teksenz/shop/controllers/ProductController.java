@@ -31,7 +31,7 @@ public class ProductController {
                     content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode = "500", description = "Internal Server Error")
     })
-    @GetMapping({"","/"})
+    @GetMapping({""})
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAllProducts(){
         return productService.findAll();
